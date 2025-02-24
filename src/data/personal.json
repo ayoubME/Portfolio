@@ -1,0 +1,234 @@
+{
+  "general": {
+    "name": "Ayoub Mellouk",
+    "role": "Ingénieur Full-Stack",
+    "location": "Paris, Île-de-France, France",
+    "email": "ayoubmellouk.am@gmail.com",
+    "github": "github.com/ayoubme",
+    "linkedin": "linkedin.com/in/ayoub-mellouk",
+    "skills": {
+      "frontend": ["React", "Next.js"],
+      "backend": ["Node.js", "Nest.js", "Express.js", ".NET", "Ruby on Rails"],
+      "database": ["PostgreSQL", "SQL Server"],
+      "cloud": ["AWS", "Azure"],
+      "tools": [
+        "Git",
+        "Docker",
+        "Jenkins",
+        "GitLab CI",
+        "Terraform",
+        "Ansible"
+      ],
+      "methodologies": ["Scrum", "BDD", "TDD"]
+    },
+    "stats": {
+      "experience": 6,
+      "projects": 30
+    }
+  },
+  "fr": {
+    "bio": "Ingénieur Full Stack spécialisé en développement web, applications et architecture logicielle, avec une expertise Agile. Expert en BDD et TDD pour garantir la qualité du code. Expérience avérée en DevOps et Cloud Computing (AWS, Azure) pour accélérer le déploiement des applications.",
+    "experience": {
+      "roles": {
+        "fullstack_sacem": {
+          "title": "Ingénieur Full Stack",
+          "company": "Sacem",
+          "period": "Janvier 2023 - Présent",
+          "description": "Développement de solutions robustes en React et Spring. Gestion du socle applicatif, mise en place de pipelines CI/CD sur AWS.",
+          "technologies": [
+            "Spring",
+            "React.js",
+            "GitLab CI",
+            "PostgreSQL",
+            "AWS",
+            "Git",
+            "Terraform"
+          ]
+        },
+        "fullstack_orano": {
+          "title": "Ingénieur Full Stack",
+          "company": "Orano",
+          "period": "Juin 2022 - Décembre 2022",
+          "description": "Développement et gestion du socle applicatif, mise en place de pipelines CI/CD et automatisation du déploiement.",
+          "technologies": [
+            ".NET",
+            "React.js",
+            "Node.js",
+            "SQL Server",
+            "Azure",
+            "Git",
+            "Azure DevOps"
+          ]
+        },
+        "fullstack_planifika": {
+          "title": "Ingénieur Full Stack",
+          "company": "Planifika Inc.",
+          "period": "2021 - 2022",
+          "description": "Analyse des spécifications, développement des fonctionnalités, intégration de pipelines CI/CD et gestion des mises en production.",
+          "technologies": [
+            "Node.js",
+            "React.js",
+            "Ruby On Rails",
+            "Express.js",
+            "PostgreSQL",
+            "Azure",
+            "Git",
+            "GitLab CI",
+            "Docker"
+          ]
+        },
+        "fullstack_saham": {
+          "title": "Développeur Full-Stack",
+          "company": "SAHAM Assurance",
+          "period": "2019 - 2021",
+          "description": "Développement web et mobile avec React et Node.js, mise en place de pipelines CI/CD et supervision des mises en production.",
+          "technologies": [
+            "Node.js",
+            "React.js",
+            "LoopBack",
+            "Nest.js",
+            "PostgreSQL",
+            "Git",
+            "Ansible",
+            "AWS",
+            "Docker"
+          ]
+        }
+      }
+    },
+    "education": [
+      {
+        "institution": "Paris YNOV Campus",
+        "degree": "Master en informatique",
+        "period": "2020 - 2021"
+      },
+      {
+        "institution": "SUPINFO International University",
+        "degree": "Bachelor of Applied Science - Informatique",
+        "period": "2016 - 2020"
+      },
+      {
+        "institution": "Lycée Mohammed 6",
+        "degree": "Baccalauréat Sciences Physiques",
+        "period": "2014"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Site CV",
+        "description": "Site web personnel pour afficher mon CV interactif avec un design moderne et responsive.",
+        "image": "https://images.unsplash.com/photo-1581093458791-0d33bc44d413?auto=format&fit=crop&q=80",
+        "tech": ["Next.js", "TailwindCSS", "Vercel"],
+        "link": "https://ayoubmellouk.dev"
+      },
+      {
+        "title": "Blog Tech",
+        "description": "Un blog personnel où je partage mes expériences et découvertes en développement web et cloud computing.",
+        "image": "https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&q=80",
+        "tech": ["Next.js", "MDX", "Vercel"],
+        "link": "https://blog.ayoubmellouk.dev"
+      },
+      {
+        "title": "Hébergement d'images",
+        "description": "Plateforme web permettant d'héberger et de partager des images facilement avec une API performante.",
+        "image": "https://images.unsplash.com/photo-1546882588-d9c1b15148e6?auto=format&fit=crop&q=80",
+        "tech": ["Node.js", "Express", "MongoDB", "React", "AWS S3"],
+        "link": "https://images.ayoubmellouk.dev"
+      }
+    ],
+    "hobbies": [
+      "Musique",
+      "Exploration de nouvelles cultures",
+      "Randonnées en montagne",
+      "Programmation",
+      "Cuisine internationale"
+    ]
+  },
+  "en": {
+    "bio": "Full Stack Engineer specialized in web development, applications, and software architecture, with Agile expertise. Expert in BDD and TDD to ensure code quality. Proven experience in DevOps and Cloud Computing (AWS, Azure) to accelerate application deployment.",
+    "experience": {
+      "roles": {
+        "fullstack_sacem": {
+          "title": "Full Stack Engineer",
+          "company": "Sacem",
+          "period": "January 2023 - Present",
+          "description": "Development of robust solutions using React and Spring. Management of application stack, implementation of CI/CD pipelines on AWS.",
+          "technologies": [
+            "Spring",
+            "React.js",
+            "GitLab CI",
+            "PostgreSQL",
+            "AWS",
+            "Git",
+            "Terraform"
+          ]
+        },
+        "fullstack_orano": {
+          "title": "Full Stack Engineer",
+          "company": "Orano",
+          "period": "June 2022 - December 2022",
+          "description": "Development and management of the application stack, implementation of CI/CD pipelines, and deployment automation.",
+          "technologies": [
+            ".NET",
+            "React.js",
+            "Node.js",
+            "SQL Server",
+            "Azure",
+            "Git",
+            "Azure DevOps"
+          ]
+        },
+        "fullstack_planifika": {
+          "title": "Full Stack Engineer",
+          "company": "Planifika Inc.",
+          "period": "2021 - 2022",
+          "description": "Analysis of specifications, development of features, CI/CD pipeline integration, and production deployment management.",
+          "technologies": [
+            "Node.js",
+            "React.js",
+            "Ruby On Rails",
+            "Express.js",
+            "PostgreSQL",
+            "Azure",
+            "Git",
+            "GitLab CI",
+            "Docker"
+          ]
+        },
+        "fullstack_saham": {
+          "title": "Full Stack Developer",
+          "company": "SAHAM Assurance",
+          "period": "2019 - 2021",
+          "description": "Web and mobile development using React and Node.js, implementation of CI/CD pipelines, and deployment supervision.",
+          "technologies": [
+            "Node.js",
+            "React.js",
+            "LoopBack",
+            "Nest.js",
+            "PostgreSQL",
+            "Git",
+            "Ansible",
+            "AWS",
+            "Docker"
+          ]
+        }
+      }
+    },
+    "projects": [
+      {
+        "title": "CV Website",
+        "description": "Personal website showcasing my interactive CV with a modern and responsive design.",
+        "image": "https://images.unsplash.com/photo-1581093458791-0d33bc44d413?auto=format&fit=crop&q=80",
+        "tech": ["Next.js", "TailwindCSS", "Vercel"],
+        "link": "https://ayoubmellouk.dev"
+      }
+    ],
+    "hobbies": [
+      "Music",
+      "Exploring new cultures",
+      "Hiking",
+      "Programming",
+      "International cuisine"
+    ]
+  }
+}
