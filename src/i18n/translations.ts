@@ -34,6 +34,7 @@ export const translations = {
     experience: {
       title: "Expériences",
       present: "Présent",
+      at: "chez",
       roles: {
         lead: {
           title: "Lead Développeur Full Stack",
@@ -108,6 +109,7 @@ export const translations = {
     experience: {
       title: "Experience",
       present: "Present",
+      at: "at",
       roles: {
         lead: {
           title: "Lead Full Stack Developer",

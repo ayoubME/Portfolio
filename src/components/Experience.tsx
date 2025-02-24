@@ -60,7 +60,7 @@ export function Experience() {
                       className="text-xl font-mono text-green-500 text-center md:text-left"
                       whileHover={{ x: 10 }}
                     >
-                      {role.title}
+                      {role.title} {t.experience.at} {role.company}
                     </motion.h3>
                     <div className="flex items-center gap-2 text-green-400/70 font-mono">
                       <Calendar className="w-4 h-4" />
