@@ -6,6 +6,7 @@ import { usePersonalData } from '../hooks/usePersonalData';
 import { useAnimationInView, fadeInUp, slideIn, scaleIn } from '../hooks/useAnimation';
 import { BlurredText } from './BlurredText';
 import { CVDownloadButton } from '../utils/cvGenerator';
+import Profile from '../assets/Profile.png'
 
 export function About() {
   const { t, language } = useLanguage();
@@ -36,7 +37,7 @@ export function About() {
           >
             <div className="aspect-square rounded-lg overflow-hidden border border-green-500/30">
               <motion.img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80" 
+                src={Profile}
                 alt="Profile"
                 className="w-full h-full object-cover brightness-75"
                 whileHover={{ scale: 1.1 }}
