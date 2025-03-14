@@ -8,4 +8,10 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    cors: true
+  },
+  build: {
+    target: ['esnext'],
+  }
 })

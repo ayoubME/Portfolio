@@ -115,25 +115,11 @@
     ],
     "projects": [
       {
-        "title": "Site CV",
+        "title": "Portfolio",
         "description": "Site web personnel pour afficher mon CV interactif avec un design moderne et responsive.",
         "image": "https://images.unsplash.com/photo-1581093458791-0d33bc44d413?auto=format&fit=crop&q=80",
-        "tech": ["Next.js", "TailwindCSS", "Vercel"],
+        "tech": ["React", "TailwindCSS", "MotionJs"],
         "link": "https://ayoubmellouk.dev"
-      },
-      {
-        "title": "Blog Tech",
-        "description": "Un blog personnel où je partage mes expériences et découvertes en développement web et cloud computing.",
-        "image": "https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&q=80",
-        "tech": ["Next.js", "MDX", "Vercel"],
-        "link": "https://blog.ayoubmellouk.dev"
-      },
-      {
-        "title": "Hébergement d'images",
-        "description": "Plateforme web permettant d'héberger et de partager des images facilement avec une API performante.",
-        "image": "https://images.unsplash.com/photo-1546882588-d9c1b15148e6?auto=format&fit=crop&q=80",
-        "tech": ["Node.js", "Express", "MongoDB", "React", "AWS S3"],
-        "link": "https://images.ayoubmellouk.dev"
       }
     ],
     "hobbies": [
@@ -216,10 +202,10 @@
     },
     "projects": [
       {
-        "title": "CV Website",
+        "title": "Portfolio",
         "description": "Personal website showcasing my interactive CV with a modern and responsive design.",
-        "image": "https://images.unsplash.com/photo-1581093458791-0d33bc44d413?auto=format&fit=crop&q=80",
-        "tech": ["Next.js", "TailwindCSS", "Vercel"],
+        "image": "https://plus.unsplash.com/premium_photo-1722729629224-4397a1ce8267?auto=format&fit=crop&q=80",
+        "tech": ["React", "TailwindCSS", "MotionJs"],
         "link": "https://ayoubmellouk.dev"
       }
     ],

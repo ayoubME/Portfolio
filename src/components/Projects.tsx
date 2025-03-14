@@ -34,7 +34,7 @@ export function Projects() {
           className="grid md:grid-cols-3 gap-8"
           variants={staggerContainer}
         >
-          {personalData.projects.map((project, index) => (
+          {personalData.projects && personalData.projects.map((project, index) => (
             <motion.div 
               key={index}
               className="group relative border border-green-500/30 overflow-hidden bg-black/50 backdrop-blur-sm"
