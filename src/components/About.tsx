@@ -6,7 +6,7 @@ import { usePersonalData } from '../hooks/usePersonalData';
 import { useAnimationInView, fadeInUp, slideIn, scaleIn } from '../hooks/useAnimation';
 import { BlurredText } from './BlurredText';
 import { CVDownloadButton } from '../utils/cvGenerator';
-import Profile from '../assets/Profile.png'
+import Profile from '../assets/Profile.jpeg'
 
 export function About() {
   const { t, language } = useLanguage();
