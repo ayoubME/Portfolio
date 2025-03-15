@@ -5,8 +5,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { usePersonalData } from '../hooks/usePersonalData';
 import { useAnimationInView, fadeInUp, slideIn, scaleIn } from '../hooks/useAnimation';
 import { BlurredText } from './BlurredText';
-import { CVDownloadButton } from '../utils/cvGenerator';
 import Profile from '../assets/Profile.jpeg';
+import CV from '../assets/ayoub_mellouk.pdf';
 
 export function About() {
   const { t, language } = useLanguage();
@@ -108,14 +108,16 @@ export function About() {
                 </motion.div>
               </motion.div>
 
-              <motion.div
-                className="w-full mt-6 bg-green-500/20 hover:bg-green-500 text-green-500 hover:text-black border border-green-500 p-4 font-mono flex items-center justify-center gap-2 transition-all cursor-pointer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <motion.a
+                href={CV}
+                download={'ayoub_mellouk_cv.pdf'}
+                className="w-full mt-6 bg-green-500/20 hover:bg-green-500 text-green-500 hover:text-black border border-green-500 p-4 font-mono flex items-center justify-center gap-2 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
+                {language === 'fr' ? 'Télécharger CV' : 'Download CV'}
                 <Download className="w-5 h-5" />
-                <CVDownloadButton language={language} />
-              </motion.div>
+              </motion.a>
             </motion.div>
           </div>
         </div>
