@@ -8,22 +8,23 @@
     "linkedin": "linkedin.com/in/ayoub-mellouk",
     "skills": {
       "frontend": ["React", "Next.js"],
-      "backend": ["Node.js", "Nest.js", "Express.js", ".NET", "Ruby on Rails"],
+      "backend": ["Node.js", "Nest.js", "Express.js", ".NET", "Spring Boot"],
       "database": ["PostgreSQL", "SQL Server"],
       "cloud": ["AWS", "Azure"],
       "tools": [
+        "AWS",
+        "Azure",
         "Git",
         "Docker",
         "Jenkins",
         "GitLab CI",
-        "Terraform",
-        "Ansible"
+        "Terraform"
       ],
       "methodologies": ["Scrum", "BDD", "TDD"]
     },
     "stats": {
       "experience": 6,
-      "projects": 30
+      "projects": 20
     }
   },
   "fr": {
