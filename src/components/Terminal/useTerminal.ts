@@ -10,7 +10,7 @@ import { Command, TerminalState } from './types';
 const KEYBOARD_SOUNDS = [
   'https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3',
   'https://assets.mixkit.co/active_storage/sfx/2570/2570-preview.mp3',
-  'https://assets.mixkit.co/active_storage/sfx/2569/2569-preview.mp3'
+  'https://assets.mixkit.co/active_storage/sfx/2569/2569-preview.mp3',
 ];
 
 export function useTerminal(): TerminalState {
@@ -20,20 +20,33 @@ export function useTerminal(): TerminalState {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isHackMode, setIsHackMode] = useState(false);
   const [terminalColor, setTerminalColor] = useState('green');
-  
+
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
-  
+
   const { t, setLanguage } = useLanguage();
   const { executeCommand } = useCommandExecution();
-  const { suggestions, selectedIndex, selectNext, selectPrevious, getCompletion, reset: resetAutocomplete } = useAutocomplete(input);
+  const {
+    suggestions,
+    selectedIndex,
+    selectNext,
+    selectPrevious,
+    getCompletion,
+    reset: resetAutocomplete,
+  } = useAutocomplete(input);
   const { addCommand, navigateHistory, reset: resetHistory } = useCommandHistory();
 
   const [playKeyPress1] = useSound(KEYBOARD_SOUNDS[0], { volume: 0.2 });
   const [playKeyPress2] = useSound(KEYBOARD_SOUNDS[1], { volume: 0.2 });
   const [playKeyPress3] = useSound(KEYBOARD_SOUNDS[2], { volume: 0.2 });
-  const [playEnter] = useSound('https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3', { volume: 0.3 });
-  const [playError] = useSound('https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3', { volume: 0.3 });
+  const [playEnter] = useSound(
+    'https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3',
+    { volume: 0.3 }
+  );
+  const [playError] = useSound(
+    'https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3',
+    { volume: 0.3 }
+  );
 
   const playRandomKeySound = () => {
     const sounds = [playKeyPress1, playKeyPress2, playKeyPress3];
@@ -118,7 +131,16 @@ export function useTerminal(): TerminalState {
             }
           } else if (trimmedCmd.startsWith('set color ')) {
             const color = trimmedCmd.split(' ')[2];
-            const validColors = ['green', 'red', 'blue', 'yellow', 'purple', 'cyan', 'white', 'orange'];
+            const validColors = [
+              'green',
+              'red',
+              'blue',
+              'yellow',
+              'purple',
+              'cyan',
+              'white',
+              'orange',
+            ];
             if (validColors.includes(color)) {
               setTerminalColor(color);
               output = `Terminal color set to ${color}`;
@@ -231,6 +253,6 @@ export function useTerminal(): TerminalState {
     terminalRef,
     handleSubmit,
     handleInputChange,
-    handleKeyDown
+    handleKeyDown,
   };
 }

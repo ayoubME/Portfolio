@@ -7,7 +7,7 @@ interface BlurredTextProps {
 
 export function BlurredText({ text, className = '' }: BlurredTextProps) {
   const letters = Array.from(text);
-  
+
   return (
     <div className={`flex overflow-hidden ${className}`}>
       {letters.map((letter, index) => (
@@ -22,7 +22,7 @@ export function BlurredText({ text, className = '' }: BlurredTextProps) {
           }}
           className="inline-block"
         >
-          {letter === " " ? "\u00A0" : letter}
+          {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
     </div>

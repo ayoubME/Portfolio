@@ -2,7 +2,7 @@ import React from 'react';
 import { AVAILABLE_COLORS } from '../../constants';
 import { TerminalState } from './types';
 
-export function TerminalInput({ 
+export function TerminalInput({
   handleSubmit,
   input,
   handleInputChange,
@@ -12,7 +12,7 @@ export function TerminalInput({
   selectedSuggestion,
   setInput,
   isHackMode,
-  terminalColor 
+  terminalColor,
 }: TerminalState) {
   return (
     <form onSubmit={handleSubmit} className={`p-2 border-t border-${terminalColor}-500/30`}>
@@ -31,13 +31,15 @@ export function TerminalInput({
             spellCheck="false"
           />
           {suggestions.length > 0 && (
-            <div className={`absolute top-full left-0 w-full bg-black/95 border border-${terminalColor}-500/30 mt-1 z-50`}>
+            <div
+              className={`absolute top-full left-0 w-full bg-black/95 border border-${terminalColor}-500/30 mt-1 z-50`}
+            >
               {suggestions.map((suggestion, index) => (
                 <div
                   key={suggestion}
                   className={`px-2 py-1 cursor-pointer ${
-                    index === selectedSuggestion 
-                      ? `bg-${terminalColor}-500/20 text-white` 
+                    index === selectedSuggestion
+                      ? `bg-${terminalColor}-500/20 text-white`
                       : AVAILABLE_COLORS[terminalColor]
                   } ${isHackMode ? 'terminal-text' : ''} hover:bg-${terminalColor}-500/10`}
                   onClick={() => {

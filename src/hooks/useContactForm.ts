@@ -13,7 +13,7 @@ export function useContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const { t } = useLanguage();
@@ -21,7 +21,7 @@ export function useContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       setFormStatus('error');
       setTimeout(() => setFormStatus('idle'), 3000);
@@ -36,7 +36,7 @@ export function useContactForm() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        reply_to: formData.email
+        reply_to: formData.email,
       };
 
       await emailjs.send(
@@ -61,7 +61,7 @@ export function useContactForm() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -69,6 +69,6 @@ export function useContactForm() {
     formData,
     formStatus,
     handleSubmit,
-    handleInputChange
+    handleInputChange,
   };
 }

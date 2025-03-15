@@ -22,17 +22,24 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#accueil" className="text-green-500 hover:text-white font-mono">~/{t.nav.home}</a>
-            <a href="#profile" className="text-green-500 hover:text-white font-mono">~/{t.nav.profile}</a>
-            <a href="#experience" className="text-green-500 hover:text-white font-mono">~/{t.nav.experience}</a>
-            <a href="#projects" className="text-green-500 hover:text-white font-mono">~/{t.nav.projects}</a>
-            <a href="#contact" className="text-green-500 hover:text-white font-mono">~/{t.nav.contact}</a>
+            <a href="#accueil" className="text-green-500 hover:text-white font-mono">
+              ~/{t.nav.home}
+            </a>
+            <a href="#profile" className="text-green-500 hover:text-white font-mono">
+              ~/{t.nav.profile}
+            </a>
+            <a href="#experience" className="text-green-500 hover:text-white font-mono">
+              ~/{t.nav.experience}
+            </a>
+            <a href="#projects" className="text-green-500 hover:text-white font-mono">
+              ~/{t.nav.projects}
+            </a>
+            <a href="#contact" className="text-green-500 hover:text-white font-mono">
+              ~/{t.nav.contact}
+            </a>
           </div>
 
-          <button 
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? (
               <X className="w-6 h-6 text-green-500" />
             ) : (
@@ -44,11 +51,21 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-green-500/30">
             <div className="flex flex-col gap-4">
-              <a href="#accueil" className="text-green-500 hover:text-white font-mono">&gt; ~/{t.nav.home}</a>
-              <a href="#profile" className="text-green-500 hover:text-white font-mono">&gt; ~/{t.nav.profile}</a>
-              <a href="#experience" className="text-green-500 hover:text-white font-mono">&gt; ~/{t.nav.experience}</a>
-              <a href="#projects" className="text-green-500 hover:text-white font-mono">&gt; ~/{t.nav.projects}</a>
-              <a href="#contact" className="text-green-500 hover:text-white font-mono">&gt; ~/{t.nav.contact}</a>
+              <a href="#accueil" className="text-green-500 hover:text-white font-mono">
+                &gt; ~/{t.nav.home}
+              </a>
+              <a href="#profile" className="text-green-500 hover:text-white font-mono">
+                &gt; ~/{t.nav.profile}
+              </a>
+              <a href="#experience" className="text-green-500 hover:text-white font-mono">
+                &gt; ~/{t.nav.experience}
+              </a>
+              <a href="#projects" className="text-green-500 hover:text-white font-mono">
+                &gt; ~/{t.nav.projects}
+              </a>
+              <a href="#contact" className="text-green-500 hover:text-white font-mono">
+                &gt; ~/{t.nav.contact}
+              </a>
             </div>
           </div>
         )}

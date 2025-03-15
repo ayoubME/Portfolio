@@ -6,7 +6,7 @@ import { usePersonalData } from '../hooks/usePersonalData';
 import { useAnimationInView, fadeInUp, slideIn, scaleIn } from '../hooks/useAnimation';
 import { BlurredText } from './BlurredText';
 import { CVDownloadButton } from '../utils/cvGenerator';
-import Profile from '../assets/Profile.jpeg'
+import Profile from '../assets/Profile.jpeg';
 
 export function About() {
   const { t, language } = useLanguage();
@@ -14,29 +14,26 @@ export function About() {
   const { ref, controls } = useAnimationInView();
 
   return (
-    <motion.div 
+    <motion.div
       ref={ref}
-      id="profile" 
+      id="profile"
       className="py-24 border-t border-green-500/30"
       initial="hidden"
       animate={controls}
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-bold mb-16 font-mono text-green-500 text-center"
           variants={fadeInUp}
         >
           <BlurredText text={`> ${t.about.title}_`} />
         </motion.h2>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            className="relative"
-            variants={scaleIn}
-          >
+          <motion.div className="relative" variants={scaleIn}>
             <div className="aspect-square rounded-lg overflow-hidden border border-green-500/30">
-              <motion.img 
+              <motion.img
                 src={Profile}
                 alt="Profile"
                 className="w-full h-full object-cover brightness-75"
@@ -49,11 +46,8 @@ export function About() {
           </motion.div>
 
           <div className="space-y-8">
-            <motion.div 
-              className="space-y-4"
-              variants={slideIn}
-            >
-              <motion.div 
+            <motion.div className="space-y-4" variants={slideIn}>
+              <motion.div
                 className="flex items-center gap-3 text-xl font-mono"
                 whileHover={{ x: 10 }}
               >
@@ -61,8 +55,8 @@ export function About() {
                 <span className="text-green-500">&gt; name_</span>
                 <span className="text-white">{personalData.name}</span>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex items-center gap-3 text-xl font-mono"
                 whileHover={{ x: 10 }}
               >
@@ -71,7 +65,7 @@ export function About() {
                 <span className="text-white">{personalData.role}</span>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-3 text-xl font-mono"
                 whileHover={{ x: 10 }}
               >
@@ -80,7 +74,7 @@ export function About() {
                 <span className="text-white">{personalData.location}</span>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-3 text-xl font-mono"
                 whileHover={{ x: 10 }}
               >
@@ -90,30 +84,26 @@ export function About() {
               </motion.div>
             </motion.div>
 
-            <motion.div 
-              className="space-y-4"
-              variants={fadeInUp}
-            >
+            <motion.div className="space-y-4" variants={fadeInUp}>
               <h3 className="text-xl font-mono text-green-500 text-center">&gt; bio_</h3>
-              <p className="text-white/80 font-mono leading-relaxed">
-                {personalData.bio}
-              </p>
-              <motion.div 
-                className="flex gap-4"
-                variants={fadeInUp}
-              >
-                <motion.div 
+              <p className="text-white/80 font-mono leading-relaxed">{personalData.bio}</p>
+              <motion.div className="flex gap-4" variants={fadeInUp}>
+                <motion.div
                   className="border border-green-500/30 p-4 flex-1 text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-3xl font-mono text-green-500 mb-2">{personalData.stats.experience}+</div>
+                  <div className="text-3xl font-mono text-green-500 mb-2">
+                    {personalData.stats.experience}+
+                  </div>
                   <div className="text-white/80 font-mono">{t.about.stats.experience}</div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="border border-green-500/30 p-4 flex-1 text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-3xl font-mono text-green-500 mb-2">{personalData.stats.projects}+</div>
+                  <div className="text-3xl font-mono text-green-500 mb-2">
+                    {personalData.stats.projects}+
+                  </div>
                   <div className="text-white/80 font-mono">{t.about.stats.projects}</div>
                 </motion.div>
               </motion.div>

@@ -9,6 +9,6 @@ export function useProjectHover() {
 
   return {
     hoveredProject,
-    handleProjectHover
+    handleProjectHover,
   };
 }

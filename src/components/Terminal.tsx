@@ -3,7 +3,12 @@ import { Terminal as TerminalIcon, MonitorOff, Monitor } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import useSound from 'use-sound';
 import { useCommandExecution } from '../hooks/useCommandExecution';
-import { AVAILABLE_COMMANDS, AVAILABLE_COLORS, KEYBOARD_SOUNDS, TERMINAL_COMMANDS } from '../constants';
+import {
+  AVAILABLE_COMMANDS,
+  AVAILABLE_COLORS,
+  KEYBOARD_SOUNDS,
+  TERMINAL_COMMANDS,
+} from '../constants';
 
 interface Command {
   command: string;
@@ -27,8 +32,14 @@ export function Terminal() {
   const [playKeyPress1] = useSound(KEYBOARD_SOUNDS[0], { volume: 0.2 });
   const [playKeyPress2] = useSound(KEYBOARD_SOUNDS[1], { volume: 0.2 });
   const [playKeyPress3] = useSound(KEYBOARD_SOUNDS[2], { volume: 0.2 });
-  const [playEnter] = useSound('https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3', { volume: 0.3 });
-  const [playError] = useSound('https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3', { volume: 0.3 });
+  const [playEnter] = useSound(
+    'https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3',
+    { volume: 0.3 }
+  );
+  const [playError] = useSound(
+    'https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3',
+    { volume: 0.3 }
+  );
 
   const playRandomKeySound = () => {
     const sounds = [playKeyPress1, playKeyPress2, playKeyPress3];
@@ -39,9 +50,9 @@ export function Terminal() {
   useEffect(() => {
     if (isOpen) {
       inputRef.current?.focus();
-      addToHistory({ 
-        command: 'help', 
-        output: TERMINAL_COMMANDS.help 
+      addToHistory({
+        command: 'help',
+        output: TERMINAL_COMMANDS.help,
       });
     }
   }, [isOpen]);
@@ -65,8 +76,8 @@ export function Terminal() {
 
   useEffect(() => {
     if (input.length > 0) {
-      const matchingCommands = [...AVAILABLE_COMMANDS, 'js'].filter(
-        cmd => cmd.startsWith(input.toLowerCase())
+      const matchingCommands = [...AVAILABLE_COMMANDS, 'js'].filter(cmd =>
+        cmd.startsWith(input.toLowerCase())
       );
       setSuggestions(matchingCommands);
       setSelectedSuggestion(-1);
@@ -111,7 +122,9 @@ export function Terminal() {
     } else {
       switch (trimmedCmd.toLowerCase()) {
         case 'help':
-          output = TERMINAL_COMMANDS.help + '\n\nNew command:\n  js         - Execute JavaScript code (e.g., js 2 + 2)';
+          output =
+            TERMINAL_COMMANDS.help +
+            '\n\nNew command:\n  js         - Execute JavaScript code (e.g., js 2 + 2)';
           break;
         case 'clear':
           setHistory([]);
@@ -221,7 +234,7 @@ export function Terminal() {
   }
 
   const terminalClasses = `
-    ${isFullscreen ? "fixed inset-0" : "fixed bottom-4 right-4 w-[90vw] md:w-[600px] h-[400px]"}
+    ${isFullscreen ? 'fixed inset-0' : 'fixed bottom-4 right-4 w-[90vw] md:w-[600px] h-[400px]'}
     ${isHackMode ? 'terminal-crt' : 'bg-black/95'}
     border border-${terminalColor}-500
     ${!isFullscreen ? 'rounded-lg shadow-xl' : ''}
@@ -231,16 +244,24 @@ export function Terminal() {
   return (
     <div className={terminalClasses}>
       {isHackMode && <div className="scanline" />}
-      <div className={`flex items-center justify-between p-2 border-b border-${terminalColor}-500/30`}>
+      <div
+        className={`flex items-center justify-between p-2 border-b border-${terminalColor}-500/30`}
+      >
         <div className="flex items-center gap-2">
-          <TerminalIcon className={`w-4 h-4 ${AVAILABLE_COLORS[terminalColor]} ${isHackMode ? 'glitch-effect' : ''}`} />
-          <span className={`text-sm font-mono ${AVAILABLE_COLORS[terminalColor]} ${isHackMode ? 'terminal-text' : ''}`}>Terminal</span>
+          <TerminalIcon
+            className={`w-4 h-4 ${AVAILABLE_COLORS[terminalColor]} ${isHackMode ? 'glitch-effect' : ''}`}
+          />
+          <span
+            className={`text-sm font-mono ${AVAILABLE_COLORS[terminalColor]} ${isHackMode ? 'terminal-text' : ''}`}
+          >
+            Terminal
+          </span>
         </div>
         <div className="flex items-center gap-2">
           <button
             onClick={() => setIsFullscreen(!isFullscreen)}
             className={`${AVAILABLE_COLORS[terminalColor]} hover:text-white transition-colors p-1`}
-            title={isFullscreen ? "Windowed Mode" : "Fullscreen Mode"}
+            title={isFullscreen ? 'Windowed Mode' : 'Fullscreen Mode'}
           >
             {isFullscreen ? <MonitorOff className="w-4 h-4" /> : <Monitor className="w-4 h-4" />}
           </button>
@@ -253,7 +274,7 @@ export function Terminal() {
         </div>
       </div>
 
-      <div 
+      <div
         ref={terminalRef}
         className={`p-4 h-[calc(100%-80px)] overflow-y-auto font-mono text-sm ${isHackMode ? 'terminal-text' : ''}`}
       >
@@ -263,9 +284,7 @@ export function Terminal() {
               <span>$</span>
               <span>{item.command}</span>
             </div>
-            <div className="text-white/80 whitespace-pre-wrap ml-4 mt-1">
-              {item.output}
-            </div>
+            <div className="text-white/80 whitespace-pre-wrap ml-4 mt-1">{item.output}</div>
           </div>
         ))}
       </div>
@@ -284,12 +303,16 @@ export function Terminal() {
               autoFocus
             />
             {suggestions.length > 0 && (
-              <div className={`absolute top-full left-0 w-full bg-black/95 border border-${terminalColor}-500/30 mt-1`}>
+              <div
+                className={`absolute top-full left-0 w-full bg-black/95 border border-${terminalColor}-500/30 mt-1`}
+              >
                 {suggestions.map((suggestion, index) => (
                   <div
                     key={suggestion}
                     className={`px-2 py-1 cursor-pointer ${
-                      index === selectedSuggestion ? `bg-${terminalColor}-500/20 text-white` : AVAILABLE_COLORS[terminalColor]
+                      index === selectedSuggestion
+                        ? `bg-${terminalColor}-500/20 text-white`
+                        : AVAILABLE_COLORS[terminalColor]
                     } ${isHackMode ? 'terminal-text' : ''}`}
                     onClick={() => {
                       setInput(suggestion);

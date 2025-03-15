@@ -25,7 +25,7 @@ export function useAnimationInView(threshold = 0.2) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold,
-    triggerOnce: true
+    triggerOnce: true,
   });
 
   useEffect(() => {
@@ -46,6 +46,6 @@ export function useProjectHover() {
 
   return {
     hoveredProject,
-    handleProjectHover
+    handleProjectHover,
   };
 }

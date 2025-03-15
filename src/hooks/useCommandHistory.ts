@@ -15,7 +15,7 @@ export function useCommandHistory() {
     if (commandHistory.length === 0) return '';
 
     let newIndex = historyIndex;
-    
+
     if (direction === 'up') {
       // If we're not in history yet, start from the end
       if (historyIndex === -1) {
@@ -46,6 +46,6 @@ export function useCommandHistory() {
     addCommand,
     navigateHistory,
     reset,
-    historyIndex
+    historyIndex,
   };
 }

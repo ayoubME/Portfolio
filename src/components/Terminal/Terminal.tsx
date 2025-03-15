@@ -7,14 +7,8 @@ import { TerminalInput } from './TerminalInput';
 import { AVAILABLE_COLORS } from '../../constants';
 
 export function Terminal() {
-  const {
-    isOpen,
-    setIsOpen,
-    isFullscreen,
-    isHackMode,
-    terminalColor,
-    terminalState
-  } = useTerminal();
+  const { isOpen, setIsOpen, isFullscreen, isHackMode, terminalColor, terminalState } =
+    useTerminal();
 
   if (!isOpen) {
     return (
@@ -29,7 +23,7 @@ export function Terminal() {
   }
 
   const terminalClasses = `
-    ${isFullscreen ? "fixed inset-0" : "fixed bottom-4 right-4 w-[90vw] md:w-[600px] h-[400px]"}
+    ${isFullscreen ? 'fixed inset-0' : 'fixed bottom-4 right-4 w-[90vw] md:w-[600px] h-[400px]'}
     ${isHackMode ? 'terminal-crt' : 'bg-black/95'}
     border border-${terminalColor}-500
     ${!isFullscreen ? 'rounded-lg shadow-xl' : ''}

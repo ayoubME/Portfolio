@@ -1,86 +1,86 @@
 import { StyleSheet } from '@react-pdf/renderer';
 
 export const pdfStyles = StyleSheet.create({
-  page: { 
-    padding: 40, 
+  page: {
+    padding: 40,
     fontFamily: 'Helvetica',
-    backgroundColor: '#ffffff' 
+    backgroundColor: '#ffffff',
   },
-  headerContainer: { 
-    padding: 20, 
-    backgroundColor: '#22c55e', 
-    color: '#fff', 
-    marginBottom: 20 
+  headerContainer: {
+    padding: 20,
+    backgroundColor: '#22c55e',
+    color: '#fff',
+    marginBottom: 20,
   },
-  headerText: { 
+  headerText: {
     fontSize: 24,
     fontFamily: 'Helvetica',
     fontWeight: 700,
-    marginBottom: 8
+    marginBottom: 8,
   },
-  section: { 
-    marginBottom: 20, 
-    padding: 16, 
-    borderBottom: '1px solid #eaeaea'
+  section: {
+    marginBottom: 20,
+    padding: 16,
+    borderBottom: '1px solid #eaeaea',
   },
-  subHeader: { 
+  subHeader: {
     fontSize: 18,
     fontFamily: 'Helvetica',
     fontWeight: 700,
     marginBottom: 12,
-    color: '#22c55e'
+    color: '#22c55e',
   },
-  text: { 
+  text: {
     fontSize: 11,
     lineHeight: 1.5,
     marginBottom: 6,
-    color: '#333333'
+    color: '#333333',
   },
-  bulletPoint: { 
+  bulletPoint: {
     fontSize: 11,
     lineHeight: 1.6,
     marginBottom: 4,
-    color: '#333333'
+    color: '#333333',
   },
-  link: { 
+  link: {
     fontSize: 11,
     color: '#22c55e',
     textDecoration: 'none',
-    marginTop: 2
+    marginTop: 2,
   },
-  projectContainer: { 
+  projectContainer: {
     marginBottom: 16,
-    paddingBottom: 8
+    paddingBottom: 8,
   },
-  skillsContainer: { 
-    flexDirection: 'row', 
-    flexWrap: 'wrap', 
+  skillsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     marginBottom: 12,
-    gap: 8
+    gap: 8,
   },
-  skillTag: { 
+  skillTag: {
     fontSize: 10,
     padding: '4 8',
-    backgroundColor: '#22c55e', 
-    color: '#ffffff', 
+    backgroundColor: '#22c55e',
+    color: '#ffffff',
     marginRight: 4,
-    marginBottom: 4
+    marginBottom: 4,
   },
   roleTitle: {
     fontSize: 14,
     fontFamily: 'Helvetica',
     fontWeight: 700,
     color: '#333333',
-    marginBottom: 4
+    marginBottom: 4,
   },
   contactInfo: {
     fontSize: 11,
     color: '#ffffff',
-    marginBottom: 4
+    marginBottom: 4,
   },
   socialLinks: {
     flexDirection: 'row',
     gap: 12,
-    marginTop: 8
-  }
+    marginTop: 8,
+  },
 });

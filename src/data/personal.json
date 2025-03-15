@@ -119,7 +119,8 @@
         "description": "Site web personnel pour afficher mon CV interactif avec un design moderne et responsive.",
         "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80",
         "tech": ["React", "TailwindCSS", "MotionJs"],
-        "link": "#"
+        "link": "#",
+        "git": "https://github.com/ayoubME/Portfolio"
       }
     ],
     "hobbies": [

@@ -32,25 +32,25 @@ export function useCommandExecution() {
 
       // Create a function in the sandbox context
       const func = new Function(...Object.keys(sandbox), `return ${code}`);
-      
+
       // Execute the function with sandbox context
       const result = func(...Object.values(sandbox));
-      
+
       setLastResult({
         success: true,
-        output: String(result)
+        output: String(result),
       });
 
       return {
         success: true,
-        output: String(result)
+        output: String(result),
       };
     } catch (error) {
       const errorResult = {
         success: false,
-        output: `Error: ${error.message}`
+        output: `Error: ${error.message}`,
       };
-      
+
       setLastResult(errorResult);
       return errorResult;
     }
@@ -76,34 +76,38 @@ Skills:
 Frontend: ${personalData.skills.frontend.join(', ')}
 Backend: ${personalData.skills.backend.join(', ')}
 Tools: ${personalData.skills.tools.join(', ')}
-`
+`,
         };
       case 'experience':
         return {
           success: true,
           output: Object.entries(personalData.experience.roles)
-            .map(([key, role]) => `
+            .map(
+              ([key, role]) => `
 ${role.title} (${role.period})
 ${role.description}
-`)
-            .join('\n')
+`
+            )
+            .join('\n'),
         };
       case 'projects':
         return {
           success: true,
           output: personalData.projects
-            .map(project => `
+            .map(
+              project => `
 ${project.title}
 Description: ${project.description}
 Technologies: ${project.tech.join(', ')}
 Link: ${project.link}
-`)
-            .join('\n')
+`
+            )
+            .join('\n'),
         };
       default:
         return {
           success: false,
-          output: `Error: Section '${section}' not found. Available sections: profile, experience, projects`
+          output: `Error: Section '${section}' not found. Available sections: profile, experience, projects`,
         };
     }
   };
@@ -121,12 +125,12 @@ Link: ${project.link}
 
     return {
       success: false,
-      output: 'Command not recognized'
+      output: 'Command not recognized',
     };
   };
 
   return {
     executeCommand,
-    lastResult
+    lastResult,
   };
 }

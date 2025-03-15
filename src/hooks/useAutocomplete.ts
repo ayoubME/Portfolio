@@ -9,40 +9,46 @@ interface AutocompleteState {
 export function useAutocomplete(input: string) {
   const [state, setState] = useState<AutocompleteState>({
     suggestions: [],
-    selectedIndex: -1
+    selectedIndex: -1,
   });
 
   useEffect(() => {
     if (input.trim()) {
       const parts = input.trim().split(' ');
       const lastWord = parts[parts.length - 1].toLowerCase();
-      
+
       let suggestions: string[] = [];
-      
+
       // Handle different command contexts
       if (parts.length === 1) {
         // Base command completion
-        suggestions = AVAILABLE_COMMANDS.filter(cmd => 
-          cmd.toLowerCase().startsWith(lastWord)
-        );
+        suggestions = AVAILABLE_COMMANDS.filter(cmd => cmd.toLowerCase().startsWith(lastWord));
       } else {
         // Argument completion based on command
         const command = parts[0].toLowerCase();
         switch (command) {
           case 'cd':
           case 'cat':
-            suggestions = ['accueil', 'profile', 'experience', 'projects', 'contact']
-              .filter(section => section.toLowerCase().startsWith(lastWord));
+            suggestions = ['accueil', 'profile', 'experience', 'projects', 'contact'].filter(
+              section => section.toLowerCase().startsWith(lastWord)
+            );
             break;
           case 'set':
             if (parts[1] === 'color') {
-              suggestions = ['green', 'red', 'blue', 'yellow', 'purple', 'cyan', 'white', 'orange']
-                .filter(color => color.toLowerCase().startsWith(lastWord));
+              suggestions = [
+                'green',
+                'red',
+                'blue',
+                'yellow',
+                'purple',
+                'cyan',
+                'white',
+                'orange',
+              ].filter(color => color.toLowerCase().startsWith(lastWord));
             }
             break;
           case 'lang':
-            suggestions = ['fr', 'en']
-              .filter(lang => lang.toLowerCase().startsWith(lastWord));
+            suggestions = ['fr', 'en'].filter(lang => lang.toLowerCase().startsWith(lastWord));
             break;
           default:
             suggestions = [];
@@ -52,7 +58,7 @@ export function useAutocomplete(input: string) {
       setState(prev => ({
         ...prev,
         suggestions,
-        selectedIndex: suggestions.length > 0 ? 0 : -1
+        selectedIndex: suggestions.length > 0 ? 0 : -1,
       }));
     } else {
       setState({ suggestions: [], selectedIndex: -1 });
@@ -62,18 +68,14 @@ export function useAutocomplete(input: string) {
   const selectNext = () => {
     setState(prev => ({
       ...prev,
-      selectedIndex: prev.selectedIndex < prev.suggestions.length - 1 
-        ? prev.selectedIndex + 1 
-        : 0
+      selectedIndex: prev.selectedIndex < prev.suggestions.length - 1 ? prev.selectedIndex + 1 : 0,
     }));
   };
 
   const selectPrevious = () => {
     setState(prev => ({
       ...prev,
-      selectedIndex: prev.selectedIndex > 0 
-        ? prev.selectedIndex - 1 
-        : prev.suggestions.length - 1
+      selectedIndex: prev.selectedIndex > 0 ? prev.selectedIndex - 1 : prev.suggestions.length - 1,
     }));
   };
 
@@ -96,6 +98,6 @@ export function useAutocomplete(input: string) {
     selectNext,
     selectPrevious,
     getCompletion,
-    reset
+    reset,
   };
 }

@@ -2,14 +2,9 @@ import React from 'react';
 import { AVAILABLE_COLORS } from '../../constants';
 import { TerminalState } from './types';
 
-export function TerminalOutput({ 
-  terminalRef,
-  history,
-  isHackMode,
-  terminalColor 
-}: TerminalState) {
+export function TerminalOutput({ terminalRef, history, isHackMode, terminalColor }: TerminalState) {
   return (
-    <div 
+    <div
       ref={terminalRef}
       className={`p-4 h-[calc(100%-80px)] overflow-y-auto font-mono text-sm ${isHackMode ? 'terminal-text' : ''}`}
     >
@@ -19,9 +14,7 @@ export function TerminalOutput({
             <span>$</span>
             <span>{item.command}</span>
           </div>
-          <div className="text-white/80 whitespace-pre-wrap ml-4 mt-1">
-            {item.output}
-          </div>
+          <div className="text-white/80 whitespace-pre-wrap ml-4 mt-1">{item.output}</div>
         </div>
       ))}
     </div>

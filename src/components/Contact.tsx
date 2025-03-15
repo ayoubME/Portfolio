@@ -12,36 +12,25 @@ export function Contact() {
   const { ref, controls } = useAnimationInView();
 
   return (
-    <motion.div 
+    <motion.div
       ref={ref}
-      id="contact" 
+      id="contact"
       className="border-t border-green-500/30 py-24"
       initial="hidden"
       animate={controls}
       variants={staggerContainer}
     >
       <div className="max-w-7xl mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-bold mb-16 font-mono text-green-500 text-center"
           variants={fadeInUp}
         >
           <BlurredText text={`> ${t.contact.title}_`} />
         </motion.h2>
 
-        <motion.div 
-          className="max-w-2xl mx-auto"
-          variants={fadeInUp}
-        >
-          <motion.form 
-            onSubmit={handleSubmit} 
-            className="space-y-6"
-            variants={staggerContainer}
-          >
-            <motion.div 
-              className="relative group"
-              variants={fadeInUp}
-              whileHover={{ x: 10 }}
-            >
+        <motion.div className="max-w-2xl mx-auto" variants={fadeInUp}>
+          <motion.form onSubmit={handleSubmit} className="space-y-6" variants={staggerContainer}>
+            <motion.div className="relative group" variants={fadeInUp} whileHover={{ x: 10 }}>
               <input
                 type="text"
                 name="name"
@@ -55,11 +44,7 @@ export function Contact() {
               </label>
             </motion.div>
 
-            <motion.div 
-              className="relative group"
-              variants={fadeInUp}
-              whileHover={{ x: 10 }}
-            >
+            <motion.div className="relative group" variants={fadeInUp} whileHover={{ x: 10 }}>
               <input
                 type="email"
                 name="email"
@@ -73,11 +58,7 @@ export function Contact() {
               </label>
             </motion.div>
 
-            <motion.div 
-              className="relative group"
-              variants={fadeInUp}
-              whileHover={{ x: 10 }}
-            >
+            <motion.div className="relative group" variants={fadeInUp} whileHover={{ x: 10 }}>
               <textarea
                 name="message"
                 value={formData.message}
@@ -117,16 +98,16 @@ export function Contact() {
             </motion.button>
 
             {/* Status Messages */}
-            <motion.div 
+            <motion.div
               className={`transition-all duration-300 ${formStatus === 'idle' ? 'opacity-0' : 'opacity-100'}`}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ 
+              animate={{
                 opacity: formStatus !== 'idle' ? 1 : 0,
-                y: formStatus !== 'idle' ? 0 : 20
+                y: formStatus !== 'idle' ? 0 : 20,
               }}
             >
               {formStatus === 'success' && (
-                <motion.div 
+                <motion.div
                   className="flex items-center gap-2 text-green-500 font-mono p-4 border border-green-500/30"
                   initial={{ x: -20 }}
                   animate={{ x: 0 }}
@@ -136,7 +117,7 @@ export function Contact() {
                 </motion.div>
               )}
               {formStatus === 'error' && (
-                <motion.div 
+                <motion.div
                   className="flex items-center gap-2 text-red-500 font-mono p-4 border border-red-500/30"
                   initial={{ x: -20 }}
                   animate={{ x: 0 }}

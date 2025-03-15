@@ -12,7 +12,7 @@ export function Skills() {
   const { ref, controls } = useAnimationInView();
 
   return (
-    <motion.div 
+    <motion.div
       ref={ref}
       className="py-24 border-t border-green-500/30"
       initial="hidden"
@@ -20,23 +20,20 @@ export function Skills() {
       variants={staggerContainer}
     >
       <div className="max-w-7xl mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-bold mb-16 font-mono text-green-500 text-center"
           variants={fadeInUp}
         >
           <BlurredText text={`> ${t.skills.title}_`} />
         </motion.h2>
-        
-        <motion.div 
-          className="grid md:grid-cols-3 gap-12"
-          variants={staggerContainer}
-        >
-          <motion.div 
+
+        <motion.div className="grid md:grid-cols-3 gap-12" variants={staggerContainer}>
+          <motion.div
             className="border border-green-500/30 p-8 hover:bg-green-500/5 transition-all text-center"
             variants={fadeInUp}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
-            <motion.div 
+            <motion.div
               className="w-16 h-16 border border-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
@@ -51,12 +48,12 @@ export function Skills() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="border border-green-500/30 p-8 hover:bg-green-500/5 transition-all text-center"
             variants={fadeInUp}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
-            <motion.div 
+            <motion.div
               className="w-16 h-16 border border-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
@@ -71,12 +68,12 @@ export function Skills() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="border border-green-500/30 p-8 hover:bg-green-500/5 transition-all text-center"
             variants={fadeInUp}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
-            <motion.div 
+            <motion.div
               className="w-16 h-16 border border-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
